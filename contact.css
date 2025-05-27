@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+:root {
+  --purple: #7f00ff;
+  --cyan: #00ffff;
+  --bg-gradient: linear-gradient(135deg, #1c0032, #18005a, #005f73);
+  --button-gradient: linear-gradient(90deg, var(--cyan), var(--purple));
+  --shadow-color: rgba(0, 255, 255, 0.5);
+  --font-primary: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  background: var(--bg-gradient);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+#three-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 30px var(--shadow-color);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  width: 100%;
+  animation: slideIn 1s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.form-card {
+  text-align: center;
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px var(--cyan);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35); /* translucent glassy look */
+  box-shadow: 0 2px 12px 0 var(--shadow-color);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 255, 255, 0.18); /* subtle cyan on focus */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background: var(--button-gradient);
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--cyan);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--purple);
+}
+
+.form-status {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #a7ffeb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-button {
+  background: var(--button-gradient);
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--cyan);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}

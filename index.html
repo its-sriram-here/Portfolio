@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRIRAM Portfolio</title>
+  <link rel="stylesheet" href="file.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <section class="intro-section">
+      <style type="text/css">
+       .div1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 185px;
+  height: 185px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 70px;
+}
+
+@media (max-width: 600px) {
+  .div1 {
+   
+    text-align: left;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 325px) {
+  .div1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name {
+    margin-top: 8px;
+    font-size: 30px;
+  }
+}
+
+
+
+        
+      </style>
+      <div class="div1">
+        <img class="profile-pic" src="IMG_20250521_131322.jpg" style="border-radius: 50%;" width="180" height="180" />
+        <h1 class="name">&nbsp;&nbsp;SRIRAM</h1>
+      </div>
+      
+      <a href="contactme.html" target="_blank" class="contact-button">Reach Me Here</a>
+      <h2 class="subtitle zoom-text" id="zoomSubtitle">Aspiring MERN Developer</h2>
+    </section>
+
+    <section class="skills-section">
+      <h3>Skills</h3>
+      <div class="skills-list">
+        <span class="skill">MERN</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Java</span>
+        <span class="skill">Python</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+      </div>
+    </section>
+
+    <section class="about-contact-section">
+      <div class="about-me">
+        <h3>About Myself</h3>
+        <p>
+          A passionate Tech Enthusiast and a recent B.Sc. Computer Technology graduate from Kongu Arts and Science College, Erode, where I passed with First Class. I completed my Higher Secondary Education in 2022 from Vivekanandha Academy CBSE, Kangeyam, with an aggregate of 78%.
+
+I’ve built a intermediate foundation in both programming and web technologies, with hands-on knowledge.
+I’m  always eager to apply my skills in real-world scenarios. I also bring strong communication skills and a deep curiosity for everything related to tech. Outside of code, you’ll find me obsessing over cars and the latest gadgets.
+        </p>
+      </div>
+
+      <div class="contact-me">
+        <h3 class="section-title">Let’s Connect</h3>
+        <div class="contact-card">
+          <div class="contact-buttons">
+            <a href="https://instagram.com/its_sriram_here" target="_blank" class="contact-button">Instagram</a><br>
+            <a href="https://github.com/its-sriram-here" target="_blank" class="contact-button">GitHub</a><br>
+            <a href="https://www.linkedin.com/in/sriram-murugesan-33aab531a" target="_blank" class="contact-button">LinkedIn</a><br>
+            <a href="mailto:srirammurugesan1807@gmail.com?subject=Inquiry&body=Hi Sriram," target="_blank" class="contact-button">Email</a><br>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <button class="resume-button" id="resumeBtn">📄 Download Resume</button>
+    </section>
+  </main>
+
+  <script>
+    const zoomPhrases = [
+    "Aspiring MERN Dev",
+    "Tech Enthusiast",
+    "Automotive Curator",
+    "Dedicated & Motivated"
+  ];
+  
+  let zoomIndex = 0;
+  const zoomSubtitle = document.getElementById("zoomSubtitle");
+  
+  function changeZoomText() {
+    zoomSubtitle.textContent = zoomPhrases[zoomIndex];
+    zoomIndex = (zoomIndex + 1) % zoomPhrases.length;
+  }
+  
+  setInterval(changeZoomText, 3000);
+  changeZoomText();  // initial call
+  
+  
+  
+  // Resume button alert for dummy placeholder link
+  const resumeBtn = document.getElementById("resumeBtn");
+  resumeBtn.addEventListener("click", () => {
+    alert("Resume download link coming soon!");
+  });
+  </script>
+</body>
+</html>
