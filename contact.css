@@ -3,7 +3,7 @@
 :root {
   --purple: #7f00ff;
   --cyan: #00ffff;
-  --bg-gradient: linear-gradient(135deg, #1c0032, #18005a, #005f73);
+  --bg-gradient: #000000;
   --button-gradient: linear-gradient(90deg, var(--cyan), var(--purple));
   --shadow-color: rgba(0, 255, 255, 0.5);
   --font-primary: "Poppins", sans-serif;
